@@ -1,9 +1,14 @@
 import pygame
+from fonts import Fonts
+from character import Character
+from rendering import render
+import pygame_twf
 pygame.init
-
+clock = pygame.time.Clock()
 window = pygame.display.set_mode([800,800])
 GAME_GO_BRRR = True
-
+font = Fonts()
+player = Character()
 
 while GAME_GO_BRRR:
 
@@ -18,6 +23,7 @@ while GAME_GO_BRRR:
 
 
 
+    #player.set_stats(50,50,str(PLAYER_NAME),5)
 
 
 
@@ -27,5 +33,7 @@ while GAME_GO_BRRR:
 
 
 
+
+    clock.tick(30)
     pygame.display.flip()
 pygame.quit()
